@@ -5,6 +5,6 @@
 - Doorkeeper
   - https://ngineerxiv.doorkeeper.jp/
 - connpass
-  - dark.connpass.com
+  - http://dark.connpass.com/
 - Slack
   - https://ngineerxiv.slack.com/
