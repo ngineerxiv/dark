@@ -10,14 +10,14 @@ build/all:
 	$(MAKE) -C timeline build
 
 run:
-	$(DOCKER) run \
-		-d slack_newchannels \
+	$(DOCKER) run -d \
 		-v $(credentials_dir):/credentials \
 		-c 256 \
+		slack_newchannels \
 		/opt/newchannels/newchannels -c /credentials/slack-new-channel.config
-	$(DOCKER) run \
-		-d slack_timeline \
+	$(DOCKER) run -d \
 		-v $(credentials_dir):/credentials \
 		-v /tmp:/tmp \
 		-c 256 \
+		slack_timeline \
 		/opt/timeline -c /credentials/slack-timeline.config -db /tmp/slacktimelinedb
