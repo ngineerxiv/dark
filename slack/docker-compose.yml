@@ -1,0 +1,11 @@
+newchannels:
+    build: ./newchannels
+    volumes:
+        - $CREDENTIALS:/credentials
+    command: /opt/newchannels/newchannels -c /credentials/slack-new-channel.config
+timeline:
+    build: ./timeline
+    volumes:
+        - $CREDENTIALS:/credentials
+    command: /opt/timeline/timeline -c /credentials/slack-timeline.config
+
